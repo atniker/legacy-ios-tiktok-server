@@ -1,0 +1,131 @@
+syntax = "proto3";
+
+message OuterMessage {
+  uint32 field1 = 1;
+  uint64 field2 = 2;
+  uint32 field3 = 3;
+  uint32 field4 = 4;
+  repeated InnerMessage5 field5 = 5;
+  bytes field6 = 6;
+  InnerMessage7 field7 = 7;
+  InnerMessage8 field8 = 8;
+  string field9 = 9;
+  string field10 = 10;
+  string field11 = 11;
+  uint32 field12 = 12;
+  uint32 field13 = 13;
+  bytes field14 = 14;
+}
+
+message InnerMessage5 {
+  string field1 = 1;
+  string field2 = 2;
+}
+
+message InnerMessage7 {
+    uint32 field14 = 14;
+}
+
+message InnerMessage8 {
+    uint32 field1 = 1;
+    uint32 field2 = 2;
+    uint32 field3 = 3;
+    bytes field4 = 4;
+    uint32 field5 = 5;
+    InnerMessage8_6 field6 = 6;
+    string field7 = 7;
+    string field14 = 14;
+}
+
+message InnerMessage8_6 {
+    InnerMessage8_6_500 field500 = 500;
+    uint32 field6 = 6;
+    uint32 field7 = 7;
+    uint32 field8 = 8;
+    uint32 field13 = 13;
+    uint32 field21 = 21;
+    uint32 field22 = 22;
+    uint32 field23 = 23;
+}
+
+message InnerMessage8_6_500 {
+    string field2 = 2;
+    uint32 field3 = 3;
+    uint32 field4 = 4;
+    InnerMessage8_6_500_5 field5 = 5;
+}
+
+message InnerMessage8_6_500_5 {
+    string field1 = 1;
+    uint32 field2 = 2;
+    uint64 field3 = 3;
+    uint64 field4 = 4;
+    uint64 field5 = 5;
+    uint32 field6 = 6;
+    uint64 field7 = 7;
+    string field8 = 8;
+
+    uint64 field10 = 10;
+    uint32 field11 = 11;
+    uint32 field12 = 12;
+    uint64 field13 = 13;
+    string field14 = 14;
+    bytes field21 = 26; // Changed to avoid conflict
+    uint32 field22 = 27; // Changed to avoid conflict
+    uint64 field25 = 28; // Changed to avoid conflict
+}
+
+message InnerMessage8_6_500_5_9_1 {
+  string field1 = 1;
+  bytes field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_2 {
+  string field1 = 1;
+  string field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_3 {
+  string field1 = 1;
+  bytes field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_4 {
+    string field1 = 1;
+    string field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_5 {
+  string field1 = 1;
+  bytes field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_6 {
+    string field1 = 1;
+    string field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_7 {
+    string field1 = 1;
+    string field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_8 {
+  string field1 = 1;
+  bytes field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_9 {
+    string field1 = 1;
+    string field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_10 {
+    string field1 = 1;
+    string field2 = 2;
+}
+
+message InnerMessage8_6_500_5_9_11 {
+    string field1 = 1;
+    string field2 = 2;
+}
