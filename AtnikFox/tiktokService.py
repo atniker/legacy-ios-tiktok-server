@@ -34,7 +34,7 @@ class TikTokScraper:
 		playwright_instance = sync_playwright().start()
 		browser_instance = playwright_instance.chromium.launch(
 			args=[
-				# '--headless=new', 
+				'--headless=new', 
 				'--disable-dev-shm-usage',
                 '--disable-gpu',
                 '--disable-software-rasterizer',
@@ -42,7 +42,7 @@ class TikTokScraper:
                 '--disable-sync',
                 '--blink-settings=imagesEnabled=false'
 			], 
-			headless=False,
+			headless=True,
 			# proxy={'server': 'socks5://192.168.1.104:8080'}
 		)
 
@@ -411,7 +411,7 @@ class TikTokScraper:
 				except:
 					break
 
-				result = avaliable_packets[i]().ParseFromString(decoded_bytes)
+				result = self.avaliable_packets[i]().ParseFromString(decoded_bytes)
 				event = i
 
 				break
@@ -436,10 +436,10 @@ class TikTokScraper:
 	def _harvestWebsockets(self, page):
 		def on_websocket(websocket):
 			def on_frame_received(frame):
-				self.executeProtoEvents(frame.payload)
+				self.executeProtoEvents(frame)
 
 			def on_frame_sent(frame):
-				print(f"WebSocket Sent: {frame.payload}")
+				print(f"WebSocket Sent: {frame}")
 
 			websocket.on("framereceived", on_frame_received)
 			websocket.on("framesent", on_frame_sent)
